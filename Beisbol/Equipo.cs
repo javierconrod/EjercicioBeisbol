@@ -12,6 +12,8 @@ namespace Beisbol
         public string CdOrigen { get; set; }
         public string Entrenador { get; set; }
         public List<Jugador> Jugadores { get; set; }
+        public Estadio estadio { get; set; }
+
 
         public Equipo()
         {

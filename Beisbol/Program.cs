@@ -17,6 +17,10 @@ namespace Beisbol
             equipos[0].Nombre = "Antolinos";
             equipos[0].CdOrigen = "Obregon";
             equipos[0].Entrenador = "Ernesto";
+            equipos[0].estadio = new Estadio();
+            equipos[0].estadio.Nombre = "Lalalá";
+            equipos[0].estadio.Direccion = "P. Sherman Wallaby 42, Sidney";
+            equipos[0].estadio.Capacidad = 200000;
 
             equipos[0].Jugadores.Add(new Jugador("Eduardo Lalin", "7"));
             equipos[0].Jugadores.Add(new Jugador("Eduardin", "1"));
@@ -32,6 +36,8 @@ namespace Beisbol
             equipos[1].Nombre = "Ivanzukis";
             equipos[1].CdOrigen = "La Salle";
             equipos[1].Entrenador = "Ivan D. Paso";
+            equipos[1].estadio = new Estadio();
+            equipos[1].estadio = null;
 
             equipos[1].Jugadores.Add(new Jugador("Gustavo", "1"));
             equipos[1].Jugadores.Add(new Jugador("Almada", "11"));
@@ -48,12 +54,23 @@ namespace Beisbol
                 Console.WriteLine("Equipo: " + equipo.Nombre);
                 Console.WriteLine("Ciudad: " + equipo.CdOrigen);
                 Console.WriteLine("Entrenador: " + equipo.Entrenador);
+                if(equipo.estadio!=null)
+                {
+                    Console.WriteLine("Estadio: " + equipo.estadio.Nombre);
+                    Console.WriteLine("Dirección: " + equipo.estadio.Direccion);
+                    Console.WriteLine("Capacidad: " + equipo.estadio.Capacidad + " personas");
+                }
+                else
+                {
+                    Console.WriteLine("No tiene estadio:(");
+                }
                 foreach(Jugador jugadores in equipo.Jugadores)
                 {
                     Console.WriteLine("Jugador: " + jugadores.Nombre);
                     Console.WriteLine("Numero: " + jugadores.Numero);
                 }
             }
+
 
             Console.ReadLine();
 
