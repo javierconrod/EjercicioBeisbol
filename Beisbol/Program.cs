@@ -17,10 +17,7 @@ namespace Beisbol
             equipos[0].Nombre = "Antolinos";
             equipos[0].CdOrigen = "Obregon";
             equipos[0].Entrenador = "Ernesto";
-            equipos[0].estadio = new Estadio();
-            equipos[0].estadio.Nombre = "Lalalá";
-            equipos[0].estadio.Direccion = "P. Sherman Wallaby 42, Sidney";
-            equipos[0].estadio.Capacidad = 200000;
+            equipos[0].estadio = new Estadio("Lalalá", "P. Sherman Wallaby 42, Sidney", 200000);
 
             equipos[0].Jugadores.Add(new Jugador("Eduardo Lalin", "7"));
             equipos[0].Jugadores.Add(new Jugador("Eduardin", "1"));

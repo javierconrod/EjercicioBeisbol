@@ -12,5 +12,16 @@ namespace Beisbol
         public string Direccion { get; set; }
         public int Capacidad { get; set; }
 
+        public Estadio (string nombre, string direccion, int capacidad)
+        {
+            Nombre = nombre;
+            Direccion = direccion;
+            Capacidad = capacidad;
+        }
+        public Estadio()
+        {
+
+        }
+
     }
 }
